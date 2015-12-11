@@ -4,6 +4,7 @@ $link-normal: #83a598;
 $link-hover: #fabd2f;
 
 $category-width: 142px;
+$category-height: 160px;
 $category-margin-horizontal: 8px;
 $category-margin-vertical: 16px;
 $total-width: 6 * ($category-width + 2 * $category-margin-horizontal) + 30;
@@ -25,10 +26,10 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -60px;
+  margin-top: -($category-height / 2);
   margin-left: -($total-width / 2);
   width: $total-width;
-  height: 120px;
+  height: $category-height;
   text-align: center;
 }
 
@@ -67,10 +68,10 @@ html, body {
 
 @media (max-width: 1000px) {
   .bookmarks {
-    margin-top: -120px;
+    margin-top: -$category-height;
     margin-left: -($total-width / 4);
     width: $total-width / 2;
-    height: 240px;
+    height: 2 * $category-height;
   }
 
   .breaker {
